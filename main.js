@@ -1,4 +1,4 @@
-console.log("hello");
+
 
 
 
@@ -35,59 +35,42 @@ var userInput = document.getElementById("input").value;
 
 var inputString = userInput.toLowerCase().split(" ");
 
-var newString = "";
+var outputString = document.getElementById("final-translation");
 
-// for (var inputString in spanish) {
-    
+//PRINT TO DOM FINAL ANSWER
 
-}
+// outputString.innerHTML = "<h3>" + "Your Translated Phrase: " + "</h3>");
 
-// console.log(spanish, german, esperanto, inputString);
-
+// TRANSLATE TEST
 
 
+// var testArray = ["merry", "christmas", "and", "happy", "new", "year"]
 
 
-// function buttonClick 
 
-
-// function matchLanguage (english, spanish) {
-//     for (var i=0; i<english; i++) {
-//         for (var i=0; i<spanish; i++) {
-//             if (english[i] === spanish[i]) {
-//             console.log(spanish);
-//         }
-//             else {console.log(nope)};
+// for (var property1 in spanish) {
+//     for (var i=0; i<testArray; i++) {
+//         if (spanish[property1] === testArray[i]) {
+//             console.log(spanish.merry + " " + spanish.christmas + " " + spanish.and + " " + spanish.happy + " " + spanish.new + " " + spanish.year + " " + "."); 
+//             } else { console.log("nope");
 //             }
 //         }
-// };
+//     };
 
 
-matchLanguage.call();
+// BUTTON CLICK
 
-// var spanishButton = document.getElementById("spanish-button");
+var spanishButton = document.getElementById("spanish-button");
 
-// spanishButton.addEventListener("click", buttonClick);
+spanishButton.addEventListener("click", buttonClick);
 
-// function buttonClick() {
-//     alert ("Hello World!");
-// }
-
-
-// function 
-
-// function match ()
-
-
-var string1 = "";
-var object1 = {a: 1, b: 2, c: 3};
-
-for (var property1 in object1) {
-  string1 = string1 + object1[property1];
+function buttonClick() {
+    console.log(userInput);
 }
 
-console.log(string1);
-// expected output: "123"
+
+
+
 
 
 
