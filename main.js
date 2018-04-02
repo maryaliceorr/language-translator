@@ -31,46 +31,47 @@ var esperanto = {
     "year":"Jahr"
 };
 
-var userInput = document.getElementById("input").value;
-
-var inputString = userInput.toLowerCase().split(" ");
-
+//---------variables-----------------//
+var userInput = document.getElementById("input");
+var spanishButton = document.getElementById("spanish-button").split(" ");
+var germanButton = document.getElementById("german-button");
+var esperantoButton = document.getElementById("esperanto-button");
 var outputString = document.getElementById("final-translation");
+var allButtons = document.getElementsByClassName("buttons");
 
-//PRINT TO DOM FINAL ANSWER
-
-// outputString.innerHTML = "<h3>" + "Your Translated Phrase: " + "</h3>");
-
-// TRANSLATE TEST
-
-
-// var testArray = ["merry", "christmas", "and", "happy", "new", "year"]
+//--------event listeners-----------//
 
 
 
-// for (var property1 in spanish) {
-//     for (var i=0; i<testArray; i++) {
-//         if (spanish[property1] === testArray[i]) {
-//             console.log(spanish.merry + " " + spanish.christmas + " " + spanish.and + " " + spanish.happy + " " + spanish.new + " " + spanish.year + " " + "."); 
-//             } else { console.log("nope");
-//             }
-//         }
-//     };
+spanishButton.addEventListener ("click", (e) => {
+    const inputString = userInput.value.toLowerCase();
+    let output = spanish[inputString];
+    outputString.innerHTML = output;
+})
 
+germanButton.addEventListener ("click", (e) => {
+    const inputString = userInput.value.toLowerCase();
+    let output = german[inputString];
+    outputString.innerHTML = output;
+})
 
-// BUTTON CLICK
+esperantoButton.addEventListener ("click", (e) => {
+    const inputString = userInput.value.toLowerCase();
+    let output = esperanto[inputString];
+    outputString.innerHTML = output;
+})
 
-var spanishButton = document.getElementById("spanish-button");
+//-------------print translation-------//
+var allButtons = document.getElementsByClassName("buttons");
 
-spanishButton.addEventListener("click", buttonClick);
-
-function buttonClick() {
-    console.log(userInput);
-}
-
-
-
-
-
-
-
+for (var i=0; i<allButtons.length; i++) {
+        allButtons[i].addEventListener("click", (e) => {
+        if (e.target.id === "spanish-button") {
+            outputString = spanishButton[userInput];
+        } else if (e.target.id === "german-button") {
+            outputString = germanButton[userInput];
+        } else {
+            outputString = "esperanto-button"
+        }
+    })
+};
