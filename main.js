@@ -33,7 +33,7 @@ var esperanto = {
 
 //---------variables-----------------//
 var userInput = document.getElementById("input");
-var spanishButton = document.getElementById("spanish-button").split(" ");
+var spanishButton = document.getElementById("spanish-button");
 var germanButton = document.getElementById("german-button");
 var esperantoButton = document.getElementById("esperanto-button");
 var outputString = document.getElementById("final-translation");
@@ -44,22 +44,35 @@ var allButtons = document.getElementsByClassName("buttons");
 
 
 spanishButton.addEventListener ("click", (e) => {
-    const inputString = userInput.value.toLowerCase();
-    let output = spanish[inputString];
+    const inputString = userInput.value.toLowerCase().split(" ");
+    console.log(typeof inputString);
+        let output = "";
+    for (var j=0; j<inputString.length; j++) {
+        output += spanish[inputString[j]].concat(" ")
+    }
     outputString.innerHTML = output;
 })
 
 germanButton.addEventListener ("click", (e) => {
-    const inputString = userInput.value.toLowerCase();
-    let output = german[inputString];
+    const inputString = userInput.value.toLowerCase().split(" ");
+        let output ="";
+    for (var k=0; k<inputString.length; k++) {
+        output += german[inputString[k]].concat(" ")
+    }
     outputString.innerHTML = output;
 })
 
 esperantoButton.addEventListener ("click", (e) => {
-    const inputString = userInput.value.toLowerCase();
-    let output = esperanto[inputString];
+    const inputString = userInput.value.toLowerCase().split(" ");
+        let output= "";
+    for (var l=0; l<inputString.length; l++) {
+        output += esperanto[inputString[l]].concat(" ")
+    }
     outputString.innerHTML = output;
 })
+
+
+
 
 //-------------print translation-------//
 var allButtons = document.getElementsByClassName("buttons");
