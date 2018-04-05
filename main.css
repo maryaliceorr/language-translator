@@ -1,0 +1,30 @@
+body {
+    background-color: red;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    border: 3px solid green;
+    border-radius: 5px 5px 5px 5px;
+    color: green;
+   
+
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+    border: none;
+    background-color: green;
+    border: 2px solid white;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+}
+
+#final-translation {
+    font-size: 36px;
+    margin: 20px;
+}
